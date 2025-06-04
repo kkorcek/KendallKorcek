@@ -1,0 +1,31 @@
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    padding: 10rem;
+}
+  .skill-icon {
+    height: 10vh;
+    padding: 8px;
+    border-radius: 5px;
+  }
+  
+  .skill-icon:hover{
+    background-color: var(--color-primary);
+  }
+
+  .navbar-links a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-mocha);
+  }
+  
+  .hover-swap {
+    transition: all 0.2s ease;
+  }
+  
+  .hover-swap:hover {
+    content: attr(data-hover); 
+  }
+ 

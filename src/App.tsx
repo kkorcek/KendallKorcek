@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { generateClient } from "aws-amplify/data";
+import './App.css'
+import Navbar from './components/navbar'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import About from './pages/About'
+import './styles/variables.css'
+import './styles/global.css'
 
 const client = generateClient<Schema>();
 
