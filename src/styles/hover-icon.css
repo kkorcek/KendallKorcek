@@ -1,0 +1,50 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: var(--color-mocha);
+  color: var(--color-text-light);
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.skill-icon {
+  height: 10vh;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.hover-swap {
+  transition: all 0.1s ease;
+}
+
+.skill-icon:hover {
+  background-color: var(--color-primary);
+}
+
+.tooltip:hover .tooltip-text {
+  animation: showTooltip 0.2s forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes showTooltip {
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}

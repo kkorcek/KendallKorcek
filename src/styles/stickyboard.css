@@ -1,0 +1,9 @@
+.sticky-board {
+  position: relative;
+  display: flex;
+  width: 85vw;
+  height: 70vw;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0.5rem auto;
+}

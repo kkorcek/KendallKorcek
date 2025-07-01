@@ -1,0 +1,41 @@
+.sticky-note {
+  max-width: fit-content;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  user-select: none;
+}
+
+.image-note {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.polaroid-note {
+  height: auto;
+  display: block;
+  box-shadow: var(--shadow-lg);
+  width: 15vw;
+}
+
+.sticky-image {
+  height: auto;
+  display: block;
+  width: 4vw;
+}
+
+.sticky-image-small {
+  height: auto;
+  display: block;
+  width: 8vw;
+}
+
+.sticky-image-large {
+  height: auto;
+  display: block;
+  width: 22vw;
+}

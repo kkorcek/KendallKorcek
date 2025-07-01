@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { useEffect } from 'react';
-import SlidingText from '../components/name';
-// import '../styles/all-pages.css';
+
 import '../styles/stack.css';
 import '../styles/home.css';
+
+import TabGrid from '../components/tabgrid.jsx';
+
+import StickyBoard from '../components/stickyboard';
 
 // Icon Images
 import cssDark from '../assets/css-logo-dark.png';
@@ -23,59 +26,128 @@ import sqlLight from '../assets/sql-logo-light.png';
 import nodeDark from '../assets/node-logo-dark.png';
 import nodeLight from '../assets/node-logo-light.png';
 
+// Main Board
+import flowerPolaroid from '../assets/flower-polaroid.png';
+import brayPolaroid from '../assets/bray-polaroid.png';
+import waterPolaroid from '../assets/water-polaroid.png';
+
+import starSticky from '../assets/star-sticky.png';
+import crumpleSticky from '../assets/crumple-sticky.png';
+import sealSticky from '../assets/seal-sticky.png';
+import ticketSticky from '../assets/ticket-sticky.png';
+import postCardSticky from '../assets/post-card-sticky.jpeg';
+
 const Home = () => {
+  const stickyNotes = [
+    {
+      text: 'Yess',
+      rotation: -5,
+      top: 0.4,
+      left: 0.05,
+      backgroundImage: flowerPolaroid,
+      isImage: false,
+      isPolaroid: true,
+    },
+    {
+      text: 'Yess',
+      rotation: 30,
+      top: 0.15,
+      left: 0.25,
+      backgroundImage: starSticky,
+      isImage: true,
+    },
+
+    {
+      text: '',
+      rotation: 10,
+      top: 0.6,
+      left: 0.6,
+      backgroundImage: ticketSticky,
+      link: '/Contact',
+      isImage: true,
+    },
+    {
+      text: 'Yess',
+      rotation: 15,
+      top: 0.25,
+      left: 0.45,
+      backgroundImage: waterPolaroid,
+      isImage: false,
+      isPolaroid: true,
+    },
+    {
+      text: '',
+      rotation: 5,
+      top: 0.15,
+      left: 0.55,
+      backgroundImage: postCardSticky,
+      largerSticky: true,
+      isImage: true,
+    },
+    {
+      text: '',
+      rotation: -30,
+      top: 0.25,
+      left: 0.65,
+      backgroundImage: sealSticky,
+      isImage: true,
+    },
+    {
+      text: '',
+      rotation: -15,
+      top: 0.1,
+      left: 0.05,
+      backgroundImage: crumpleSticky,
+      largerSticky: true,
+      isImage: true,
+    },
+    {
+      text: 'Yess',
+      rotation: -5,
+      top: 0.35,
+      left: 0.25,
+      backgroundImage: brayPolaroid,
+      isImage: false,
+      isPolaroid: true,
+    },
+  ];
+
   useEffect(() => {
-          const icons = document.querySelectorAll('.hover-swap');
-        
-          const handleMouseEnter = (e) => {
-            const hoverSrc = e.currentTarget.getAttribute('data-hover');
-            e.currentTarget.setAttribute('src', hoverSrc);
-          };
-        
-          const handleMouseLeave = (e) => {
-            const originalSrc = e.currentTarget.getAttribute('data-original');
-            e.currentTarget.setAttribute('src', originalSrc);
-          };
-        
-          icons.forEach((icon) => {
-            icon.setAttribute('data-original', icon.getAttribute('src'));
-            icon.addEventListener('mouseenter', handleMouseEnter);
-            icon.addEventListener('mouseleave', handleMouseLeave);
-          });
-        
-          return () => {
-            icons.forEach((icon) => {
-              icon.removeEventListener('mouseenter', handleMouseEnter);
-              icon.removeEventListener('mouseleave', handleMouseLeave);
-            });
-          };
-        }, []);
+    const icons = document.querySelectorAll('.hover-swap');
+
+    const handleMouseEnter = (e) => {
+      const hoverSrc = e.currentTarget.getAttribute('data-hover');
+      e.currentTarget.setAttribute('src', hoverSrc);
+    };
+
+    const handleMouseLeave = (e) => {
+      const originalSrc = e.currentTarget.getAttribute('data-original');
+      e.currentTarget.setAttribute('src', originalSrc);
+    };
+
+    icons.forEach((icon) => {
+      icon.setAttribute('data-original', icon.getAttribute('src'));
+      icon.addEventListener('mouseenter', handleMouseEnter);
+      icon.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    return () => {
+      icons.forEach((icon) => {
+        icon.removeEventListener('mouseenter', handleMouseEnter);
+        icon.removeEventListener('mouseleave', handleMouseLeave);
+      });
+    };
+  }, []);
   return (
-    <div class='container'>
+    <div className="container">
       <div className="name-content">
-            <h2 className="text-shadows">Kendall Korcek</h2>
+        <h2 className="text-shadows">Kendall Korcek</h2>
       </div>
-      
-      <h3>Skills</h3>
-          <div className="skills-grid">
-            <img src={jsDark} data-hover={jsLight} alt='JS Logo' className='skill-icon hover-swap'></img>
-            <img src={htmlDark} data-hover={htmlLight} alt='HTML Logo' className='skill-icon hover-swap'></img>
-            <img src={cssDark} data-hover={cssLight} alt='CSS Logo' className='skill-icon hover-swap'></img>
-            <img src={reactDark} data-hover={reactLight} alt='React Logo' className='skill-icon hover-swap'></img>
-            <img src={cpDark} data-hover={cpLight} alt='C++ Logo' className='skill-icon hover-swap'></img>
-            <img src={figmaDark} data-hover={figmaLight} alt='Figma Logo' className='skill-icon hover-swap'></img>
-            <img src={sqlDark} data-hover={sqlLight} alt='SQL Logo' className='skill-icon hover-swap'></img>
-            <img src={nodeDark} data-hover={nodeLight} alt='Node.js Logo' className='skill-icon hover-swap'></img>
-          </div>
-      
+      {/* <div className='text-block'>
+      </div>  */}
+      <StickyBoard notes={stickyNotes} />
     </div>
-
-
-    
-
-      
-
-  )   
+  );
 };
 
 export default Home;

@@ -1,86 +1,80 @@
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
   width: 100%;
-  max-width: 1200px; /* Optional: limits how wide it gets on huge screens */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 1.5rem 2rem;
   background-color: var(--color-secondary);
   border-radius: 5px;
   z-index: 1000;
-  
   box-shadow: 2px 3px 5px var(--color-mocha);
   height: 80px;
-  }
-  
-  .navbar-logo {
-    font-size: var(--font-size-xl);
-    font-family: var(--font-heading);
-    color: var(--color-text-light);
-    font-weight: bold;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+}
 
-  }
-  
-  .navbar-links a {
-    color: var(--color-text-light);
-    font-family: var(--font-heading);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px;
-    border-radius: 5px;
+.navbar-logo {
+  font-size: var(--font-size-xl);
+  font-family: var(--font-heading);
+  color: var(--color-text-light);
+  font-weight: bold;
+}
 
-  }
-  .navbar-icons {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  .nav-icon {
-    height: 5vh;
-    padding: 8px;
-    border-radius: 5px;
-  }
-  
-  .nav-icon:hover{
-    background-color: var(--color-primary);
-  }
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-  .navbar-links a:hover {
-    background-color: var(--color-primary);
-    color: var(--color-mocha);
-  }
-  
-  .hover-swap {
-    transition: all 0.2s ease;
-  }
-  
-  .hover-swap:hover {
-    content: attr(data-hover); /* does nothing, but sets the stage */
-  }
+.navbar-links a {
+  color: var(--color-text-light);
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+}
+.navbar-icons {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+.nav-icon {
+  height: 2.2rem;
+  padding: 8px;
+  border-radius: 5px;
+}
 
-  .hover-download {
-    position: absolute;
-    display: inline-block;
-    visibility: hidden;
-  }
+.nav-icon:hover {
+  background-color: var(--color-primary);
+}
 
-  .hover-download:hover {
-    visibility: visible;
-    opacity: 1;
-  }
+.navbar-links a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-mocha);
+}
+
+.hover-swap {
+  transition: all 0.2s ease;
+}
+
+.hover-swap:hover {
+  content: attr(data-hover);
+}
+
+.hover-download {
+  position: absolute;
+  display: inline-block;
+  visibility: hidden;
+}
+
+.hover-download:hover {
+  visibility: visible;
+  opacity: 1;
+}

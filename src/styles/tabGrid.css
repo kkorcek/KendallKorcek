@@ -1,0 +1,119 @@
+.file-wrapper {
+  height: 700px;
+  margin-top: 35px;
+}
+.tab-titles {
+  overflow: hidden;
+  text-align: left;
+  background-color: var(--color-bg);
+  justify-content: left;
+}
+
+.tablink {
+  padding: 0.5rem 1rem;
+  border: var(--color-primary);
+  background-color: var(--color-primary-2);
+  cursor: pointer;
+  margin-right: 8px;
+  border-top-right-radius: var(--radius-sm);
+  border-top-left-radius: var(--radius-sm);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: var(--shadow-lg);
+}
+
+.tablink:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.tablink.active {
+  background-color: var(--color-primary);
+  border: 0px;
+}
+.tablink:hover {
+  background-color: var(--color-primary-1);
+}
+
+.tab-area {
+  border-radius: var(--radius-sm);
+  border-top-left-radius: 0px;
+  background-color: var(--color-primary);
+  height: 600px;
+  width: 70vw;
+  box-shadow: var(--shadow-lg);
+  justify-content: left;
+  overflow-y: scroll;
+}
+
+.divider {
+  border-color: var(--color-mocha);
+  border-width: 0.5px;
+}
+.link-text {
+  color: var(--color-mocha);
+}
+.link-text:hover {
+  color: var(--color-secondary);
+}
+/* Format Skills equally Spaced */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 1rem; */
+  /* justify-items: center;
+  align-items: center; */
+  /* padding: 10rem; */
+}
+
+/* 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: var(--color-mocha);
+  color: var(--color-text-light);
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.skill-icon {
+  height: 10vh;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.hover-swap {
+  transition: all 0.2s ease;
+}
+
+.skill-icon:hover {
+  background-color: var(--color-primary);
+}
+
+.tooltip:hover .tooltip-text {
+  animation: showTooltip 0.2s forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes showTooltip {
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+} */
