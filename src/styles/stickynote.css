@@ -19,23 +19,27 @@
   height: auto;
   display: block;
   box-shadow: var(--shadow-lg);
+  min-width: 150px;
   width: 15vw;
 }
 
 .sticky-image {
   height: auto;
   display: block;
+  min-width: 150px;
   width: 4vw;
 }
 
 .sticky-image-small {
   height: auto;
   display: block;
-  width: 8vw;
+  min-width: 100px;
+  width: 10vw;
 }
 
 .sticky-image-large {
   height: auto;
   display: block;
-  width: 22vw;
+  min-width: 250px;
+  width: 30vw;
 }

@@ -23,6 +23,7 @@
 .business-card-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .business-card-name {
@@ -39,6 +40,9 @@
   margin: 2px 0;
   font-size: 0.95rem;
   color: var(--color-text-light);
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .linkedIn-link:hover {

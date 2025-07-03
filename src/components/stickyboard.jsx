@@ -22,6 +22,7 @@ const StickyBoard = ({ notes }) => {
           largerSticky={note.largerSticky}
           onActivate={() => setActiveNoteIndex(index)}
           isActive={index === activeNoteIndex}
+          altText={note.altText}
         />
       ))}
     </div>

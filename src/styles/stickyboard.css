@@ -1,8 +1,10 @@
 .sticky-board {
   position: relative;
   display: flex;
-  width: 85vw;
-  height: 70vw;
+  min-width: 390px;
+  width: 80vw;
+  height: 700px;
+  /* border: 1px solid var(--color-mocha); */
   border-radius: 12px;
   overflow: hidden;
   margin: 0.5rem auto;

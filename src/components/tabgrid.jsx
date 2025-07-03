@@ -246,6 +246,7 @@ const TabGrid = () => {
                     <a
                       className="link-text"
                       href="http://www.capstone.cse.msu.edu/2025-01/projects/netjets/"
+                      target="_blank"
                     >
                       Recipient of the Amazon Sigma Award, presented to the team
                       delivering the best overall capstone experience across all
@@ -253,6 +254,7 @@ const TabGrid = () => {
                     </a>
                   </li>
                 </ul>
+                <br></br>
               </p>
             </>
           }
@@ -263,7 +265,6 @@ const TabGrid = () => {
           content={
             <>
               <h2>Languages and Frameworks</h2>
-
               <div className="skills-grid">
                 <div className="tooltip">
                   <HoverIcon
@@ -332,6 +333,7 @@ const TabGrid = () => {
                   <div className="tooltip-text">Python</div>
                 </div>
               </div>
+
               <h2>Developer and Design Tools</h2>
               <div className="skills-grid">
                 <div className="tooltip">
@@ -341,31 +343,31 @@ const TabGrid = () => {
                     alt="Figma Logo"
                   />
                   <div className="tooltip-text">Figma</div>
+                </div>
 
-                  <div className="tooltip">
-                    <HoverIcon
-                      darkSrc={vscodeDark}
-                      lightSrc={vscodeLight}
-                      alt="VSCode Logo"
-                    />
-                    <div className="tooltip-text">VS Code</div>
-                  </div>
-                  <div className="tooltip">
-                    <HoverIcon
-                      darkSrc={gitDark}
-                      lightSrc={gitLight}
-                      alt="Git Logo"
-                    />
-                    <div className="tooltip-text">Git</div>
-                  </div>
-                  <div className="tooltip">
-                    <HoverIcon
-                      darkSrc={googleDark}
-                      lightSrc={googleLight}
-                      alt="Google Cloud Platform Logo"
-                    />
-                    <div className="tooltip-text">Google Cloud Platform</div>
-                  </div>
+                <div className="tooltip">
+                  <HoverIcon
+                    darkSrc={vscodeDark}
+                    lightSrc={vscodeLight}
+                    alt="VSCode Logo"
+                  />
+                  <div className="tooltip-text">VS Code</div>
+                </div>
+                <div className="tooltip">
+                  <HoverIcon
+                    darkSrc={gitDark}
+                    lightSrc={gitLight}
+                    alt="Git Logo"
+                  />
+                  <div className="tooltip-text">Git</div>
+                </div>
+                <div className="tooltip">
+                  <HoverIcon
+                    darkSrc={googleDark}
+                    lightSrc={googleLight}
+                    alt="Google Cloud Platform Logo"
+                  />
+                  <div className="tooltip-text">Google Cloud Platform</div>
                 </div>
               </div>
             </>

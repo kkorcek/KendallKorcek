@@ -20,7 +20,7 @@ const BusinessCard = ({
     >
       <div className="business-card">
         <img src={image} alt="Profile" className="business-card-img" />
-        <div className="card-content">
+        <div className="buisness-card-info">
           <h2 className="business-card-name">{name}</h2>
           <p className="business-card-title">{title}</p>
           <p className="business-card-contact">{email}</p>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Draggable from 'react-draggable';
 import { Link } from 'react-router-dom';
 import '../styles/stickynote.css';
@@ -16,19 +16,34 @@ const StickyNote = ({
   link,
   onActivate,
   isActive = false,
+  altText = 'Sticky',
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [percentPos, setPercentPos] = useState({ top, left });
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+
+  const noteRef = useRef(null);
+  const boardRef = useRef(null);
 
   // Convert percent to pixel position on mount & resize
   useEffect(() => {
     const updatePosition = () => {
-      const x = window.innerWidth * percentPos.left;
-      const y = window.innerHeight * percentPos.top;
+      const board = boardRef.current || document.querySelector('.sticky-board');
+      const note = noteRef.current;
+
+      if (!board || !note) return;
+
+      const boardRect = board.getBoundingClientRect();
+      const noteRect = note.getBoundingClientRect();
+
+      const maxX = boardRect.width - noteRect.width;
+      const maxY = boardRect.height - noteRect.height;
+
+      let x = boardRect.width * percentPos.left;
+      let y = boardRect.height * percentPos.top;
+
+      x = Math.max(0, Math.min(x, maxX));
+      y = Math.max(0, Math.min(y, maxY));
+
       setPosition({ x, y });
     };
 
@@ -42,17 +57,17 @@ const StickyNote = ({
       let adjustedLeftPercent = percentPos.left;
 
       if (innerWidth < 1200 && innerWidth >= 900) {
-        adjustedTopPercent = percentPos.top - 0.05;
+        // adjustedTopPercent = percentPos.top - 0.05;
         adjustedLeftPercent = percentPos.left - 0.05;
       } else if (innerWidth < 900 && innerWidth >= 600) {
-        adjustedTopPercent = percentPos.top - 0.1;
+        // adjustedTopPercent = percentPos.top - 0.1;
         adjustedLeftPercent = percentPos.left - 0.1;
       } else if (innerWidth < 600) {
-        adjustedTopPercent = percentPos.top - 0.15;
+        // adjustedTopPercent = percentPos.top - 0.15;
         adjustedLeftPercent = percentPos.left - 0.15;
       }
 
-      const x = innerWidth * percentPos.left;
+      const x = innerWidth * adjustedLeftPercent;
       const y = innerHeight * adjustedTopPercent;
 
       setPosition({ x, y });
@@ -69,10 +84,24 @@ const StickyNote = ({
 
   // Convert drag movement to percent-based position
   const handleDrag = (e, data) => {
-    setPosition({ x: data.x, y: data.y });
+    const board = document.querySelector('.sticky-board');
+    if (!board) return;
+    const boardRect = board.getBoundingClientRect();
 
-    const newLeftPercent = data.x / window.innerWidth;
-    const newTopPercent = data.y / window.innerHeight;
+    const x = Math.max(
+      0,
+      Math.min(data.x, boardRect.width - noteRef.current.offsetWidth)
+    );
+    const y = Math.max(
+      0,
+      Math.min(data.y, boardRect.height - noteRef.current.offsetHeight)
+    );
+
+    setPosition({ x, y });
+
+    const newLeftPercent = x / boardRect.width;
+    const newTopPercent = y / boardRect.height;
+
     setPercentPos({ top: newTopPercent, left: newLeftPercent });
   };
 
@@ -88,7 +117,7 @@ const StickyNote = ({
     const imgElement = (
       <img
         src={backgroundImage}
-        alt="Sticky Note"
+        alt={altText}
         className={imageClass}
         draggable={false}
       />
@@ -131,6 +160,7 @@ const StickyNote = ({
       onStart={onActivate}
     >
       <div
+        ref={noteRef}
         className={`sticky-note ${isPolaroid || isImage ? 'image-note' : ''}`}
         style={{
           position: 'absolute',
