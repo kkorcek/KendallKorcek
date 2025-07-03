@@ -1,25 +1,48 @@
-## AWS Amplify React+Vite Starter Template
+# Kendall Korcek – Personal Web App Portfolio
 
-This repository provides a starter template for creating applications using React+Vite and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.
+Welcome to my personal web app! This project serves as an interactive portfolio showcasing my development skills, personal projects, design inspirations, and contact information. Built with modern web technologies, it's designed to be visually engaging and responsive across devices.
 
-## Overview
+---
 
-This template equips you with a foundational React application integrated with AWS Amplify, streamlined for scalability and performance. It is ideal for developers looking to jumpstart their project with pre-configured AWS services like Cognito, AppSync, and DynamoDB.
+## Preview
+
+<!-- ![Screenshot of the homepage](./public/app-preview.png) -->
+<p align="center">
+  <img src="./public/app-preview.png" alt="Homepage preview" width="700"/>
+</p>
+
+[Live Site ➝](https://kendallkorcek.com)
+
+---
+
+## Built With
+
+- **React.js** – UI components & layout
+- **React Draggable** – Interactive sticky notes
+- **React Router** – Page navigation
+- **CSS Modules / SCSS** – Styling
+- **Amazon Web Services (AWS)** – Hosting & backend (if applicable)
+
+---
 
 ## Features
 
-- **Authentication**: Setup with Amazon Cognito for secure user authentication.
-- **API**: Ready-to-use GraphQL endpoint with AWS AppSync.
-- **Database**: Real-time database powered by Amazon DynamoDB.
+- Interactive sticky note board
+- Dynamic themed icons with hover effects
+- Responsive mobile layout
+- Custom routing for About, Projects, and Contact pages
+- Linked social media, GitHub, and resume download
+- Personal photos and design elements created with Figma
 
-## Deploying to AWS
+---
 
-For detailed instructions on deploying your application, refer to the [deployment section](https://docs.amplify.aws/react/start/quickstart/#deploy-a-fullstack-app-to-aws) of our documentation.
+## Installation
 
-## Security
+Clone the repo and run locally:
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
+```bash
+git clone https://github.com/kkorcek/KendallKorcek.git
+cd KendallKorcek
+npm install
+npm run dev
+```
