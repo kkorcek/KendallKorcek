@@ -1,7 +1,4 @@
-// import { useEffect, useState } from "react";
-// import type { Schema } from "../amplify/data/resource";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { generateClient } from "aws-amplify/data";
 import './App.css';
 import Navbar from './components/navbar';
 import Home from './pages/Home';
