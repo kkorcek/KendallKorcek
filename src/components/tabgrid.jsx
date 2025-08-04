@@ -153,11 +153,8 @@ const TabGrid = () => {
 
                 <ul>
                   <li>
-                    Evaluated and resolved first-level technical issues
-                    troubleshooting hardware malfunctions, software bugs, and
-                    network connectivity problems, using remote desktop and
-                    desktop support for quick identification and resolution of
-                    customer concerns, initiating contact within a day
+                    Evaluated and resolved first-level technical issues, troubleshooting hardware malfunctions, software bugs, and
+                    network connectivity problems, using remote de
                   </li>
                   <li>
                     Configured desktop computers, laptops, and peripherals by
@@ -228,11 +225,9 @@ const TabGrid = () => {
                     management
                   </li>
                   <li>
-                    Architecting a full-stack application utilizing AWS
-                    (Amplify, Cognito, API Gateway, Lambda, Dynamo DB), Node.js,
-                    React.js, and Google Maps API to achieve real-time capacity
-                    tracking, interactive visualizations, and data-driven
-                    operational recommendations
+                    Architected a full-stack application utilizing AWS (Amplify, API Gateway, Dynamo DB), Node.js, React.js, and
+                    Google Maps API to achieve real-time capacity tracking, interactive visualizations, and data-driven operational
+                    recommendations
                   </li>
                   <li>
                     Orchestrating the integration of real-time flight data to
