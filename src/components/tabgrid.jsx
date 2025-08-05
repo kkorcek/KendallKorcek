@@ -188,16 +188,12 @@ const TabGrid = () => {
 
                 <ul>
                   <li>
-                    Furthered organization skills by creating a system for
-                    collecting employee documents and purifying data for over
-                    400 employees for future transfer to a new payroll system
-                    through scanning, filing, and archiving
+                    Furthered organization skills by creating a system for collecting employee documents and purifying data for over
+400 employees for migration to a new payroll system through scanning, filing, and archiving
                   </li>
                   <li>
-                    Performed basic database management and updates on internal
-                    accounting and tax systems to update data for over 100k
-                    accounts the future transfer to a new accounting system for
-                    the company
+                    Performed basic database management and updates on internal accounting and tax systems to update data for over
+100,000 accounts for transfer to a new accounting system
                   </li>
                 </ul>
               </p>
