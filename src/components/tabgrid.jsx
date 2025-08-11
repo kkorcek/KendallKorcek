@@ -221,7 +221,7 @@ const TabGrid = () => {
                     management
                   </li>
                   <li>
-                    Architected a full-stack application utilizing AWS (Amplify, API Gateway, Dynamo DB), Node.js, React.js, and
+                    Architected a full-stack application utilizing AWS (Amplify, API Gateway, RDS), Node.js, React.js, and
                     Google Maps API to achieve real-time capacity tracking, interactive visualizations, and data-driven operational
                     recommendations
                   </li>
