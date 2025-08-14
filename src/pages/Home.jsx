@@ -36,6 +36,7 @@ import crumpleSticky from '../assets/crumple-sticky.png';
 import sealSticky from '../assets/seal-sticky.png';
 import ticketSticky from '../assets/ticket-sticky.png';
 import postCardSticky from '../assets/post-card-sticky.jpeg';
+import msuSticky from '../assets/msu-sticky.png';
 
 const Home = () => {
   const stickyNotes = [
@@ -119,6 +120,16 @@ const Home = () => {
       isPolaroid: true,
       altText: 'Bray Ireland Polaroid Image',
     },
+    {
+      text: '',
+      rotation: 10,
+      top: 0.3,
+      left: 0.35,
+      backgroundImage: msuSticky,
+      largerSticky: false,
+      isImage: true,
+      altText: 'Crumpled Sticky Note Image: Move Me!',
+    }
   ];
 
   useEffect(() => {

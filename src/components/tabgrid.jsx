@@ -137,6 +137,47 @@ const TabGrid = () => {
           isActive={activeTab === 'Experiences'}
           content={
             <>
+            <div className="title-row">
+                <h4>NetJets Airport Capacity and Ground Space Management</h4>
+                <p className="title-meta">East Lansing, MI</p>
+              </div>
+            <p>
+                <div className="title-row">
+                  <strong className="second-banner">
+                    <em>Student Capstone Experience</em>
+                  </strong>
+                  <br />
+                  <p className="title-meta">January 2025 – May 2025</p>
+                </div>
+
+                <ul>
+                  <li>
+                    Enhanced airport capacity decision making by delivering a full-stack web application with real-time monitoring,
+                    interactive visualizations, recommendations, leveraging AWS (Amplify, API Gateway, RDS), Node.js, React.js, and
+                    Google Maps API
+                  </li>
+                  <li>
+                    Developed a dynamic recommendation engine, identified over-capacity risks, and 100% capacity scenarios,
+                    optimizing aircraft parking and rerouting by integrating live FAA flight data with airport capacity model
+                  </li>
+                  <li>
+                    Collaborated with a team of 6 through full software development lifecycle, from requirements gathering to AWS
+                    deployment, ensuring seamless integration of backend services, frontend UI, and live data feeds
+                  </li>
+                  <li>
+                    <a
+                      className="link-text"
+                      href="http://www.capstone.cse.msu.edu/2025-01/projects/netjets/"
+                      target="_blank"
+                    >
+                      Earned the Amazon Sigma Award for best overall capstone, recognizing excellence in formal project planning,
+                      presentation, software, and project video
+                    </a>
+                  </li>
+                </ul>
+                <br></br>
+              </p>
+
               <div className="title-row">
                 <h4>Michigan State University, College of Education</h4>
                 <p className="title-meta">East Lansing, MI</p>
@@ -153,19 +194,17 @@ const TabGrid = () => {
 
                 <ul>
                   <li>
-                    Evaluated and resolved first-level technical issues, troubleshooting hardware malfunctions, software bugs, and
-                    network connectivity problems, using remote de
+                    Minimized faculty and staff downtime by initiating contact within 24 hours to evaluate and resolve first-level
+                    technical issues, troubleshoot hardware malfunctions, software bugs, and connectivity issues
                   </li>
                   <li>
-                    Configured desktop computers, laptops, and peripherals by
-                    installing operating systems, configuring user settings, and
-                    deploying essential software such as antivirus programs and
-                    productivity suites
+                    Configured Mac and Windows desktop computers, laptops, and peripherals by installing operating systems,
+                    setting up user profiles, and deploying essential software such as antivirus programs and productivity suites
+                    using JAMF for automated MacOS deployment and manual deployment for windows systems
                   </li>
                   <li>
-                    Preformed system and driver updates to university devices,
-                    as well as routine maintenance to ensure optimal performance
-                    and security of college equipment
+                    Performed fresh installs of operating systems, including system and driver updates to university devices, as well
+                    as routine maintenance including antivirus scans to ensure optimal performance, security, and reliability
                   </li>
                 </ul>
               </p>
@@ -188,65 +227,21 @@ const TabGrid = () => {
 
                 <ul>
                   <li>
-                    Furthered organization skills by creating a system for collecting employee documents and purifying data for over
-400 employees for migration to a new payroll system through scanning, filing, and archiving
+                    Improved organizational efficiency by developing a streamlined system to scan, file and archived employee
+                    documents for over 400 staff members: purified and prepared data for migration to a new payroll system
                   </li>
                   <li>
-                    Performed basic database management and updates on internal accounting and tax systems to update data for over
-100,000 accounts for transfer to a new accounting system
+                    Managed and updated accounting and tax databases, preparing data for over 100,000 accounts for seamless
+                    migration to a new accounting system
                   </li>
                 </ul>
               </p>
 
               <br></br>
 
-              <div className="title-row">
-                <h4>NetJets Airport Capacity and Ground Space Management</h4>
-                <p className="title-meta">East Lansing, MI</p>
-              </div>
+            
 
-              <p>
-                <div className="title-row">
-                  <strong className="second-banner">
-                    <em>Student Capstone Experience</em>
-                  </strong>
-                  <br />
-                  <p className="title-meta">January 2025 – May 2025</p>
-                </div>
-
-                <ul>
-                  <li>
-                    Collaborating with a team of 6 to design and develop a web
-                    application for optimizing airport capacity and ground space
-                    management
-                  </li>
-                  <li>
-                    Architected a full-stack application utilizing AWS (Amplify, API Gateway, RDS), Node.js, React.js, and
-                    Google Maps API to achieve real-time capacity tracking, interactive visualizations, and data-driven operational
-                    recommendations
-                  </li>
-                  <li>
-                    Orchestrating the integration of real-time flight data to
-                    accurately track aircraft ground positions and constructing
-                    a dynamic recommendation engine simulates airport capacity
-                    scenarios, identifies potential over-capacity risks, and
-                    generates data-driven strategies for optimizing aircraft
-                    parking, taxi routes, and scheduling efficiency
-                  </li>
-                  <li>
-                    <a
-                      className="link-text"
-                      href="http://www.capstone.cse.msu.edu/2025-01/projects/netjets/"
-                      target="_blank"
-                    >
-                      Recipient of the Amazon Sigma Award, presented to the team
-                      delivering the best overall capstone experience across all
-                      CSE 498 projects
-                    </a>
-                  </li>
-                </ul>
-                <br></br>
-              </p>
+              
             </>
           }
         />
