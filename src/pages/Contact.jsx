@@ -8,7 +8,7 @@ const Contact = () => {
       <BusinessCard
         name="Kendall Korcek"
         title="Software Engineer"
-        email="korcekke@msu.edu"
+        email="kendallkorcek10@gmail.com"
         phone="(734) 864-2364"
         linkedIn="https://www.linkedin.com/in/kendall-korcek/"
         image="/headshot.jpg"

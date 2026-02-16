@@ -138,6 +138,30 @@ const TabGrid = () => {
           content={
             <>
             <div className="title-row">
+                <h4>Avfuel Corporation</h4>
+                <p className="title-meta">Ann Arbor, MI</p>
+            </div>
+            <p>
+                <div className="title-row">
+                  <strong className="second-banner">
+                    <em>Billing Associate</em>
+                  </strong>
+                  <br />
+                  <p className="title-meta">August 2025 – Present</p>
+                </div>
+
+                <ul>
+                  <li>
+                    Utilize company software to manage customer invoices and identify discrepancies ensuring accuracy to consistently meet
+                    strict daily deadlines
+                  </li>
+                  <li>
+                    Collaborate with customers and sales team to determine and bill according to exceptions while delivering excellent customer
+                    service
+                  </li>
+                </ul>
+            </p>
+            <div className="title-row">
                 <h4>NetJets Airport Capacity and Ground Space Management</h4>
                 <p className="title-meta">East Lansing, MI</p>
               </div>
